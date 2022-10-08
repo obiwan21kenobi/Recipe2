@@ -1,0 +1,995 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*font-family: 'Bebas Neue', cursive;
+font-family: 'Montserrat', sans-serif;*/
+
+html {
+    background-color: rgba(122, 191, 191, .5);
+}
+
+body {
+    width: 414px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, nav a, nav span, figcaption, menu li, #social li, footer {
+        font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 150px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+.street-tacos {
+    width: 100%;
+}
+
+/*Section for icons: save, share, print and jump to recipe*/
+menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    margin-bottom: -60px;
+}
+
+menu li {
+    color: #EB5428;
+    font-size: 20px;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.icon-tabler-download {
+    position: relative;
+    bottom: 20px;
+    right: 35px;
+}
+
+.icon-tabler-share {
+    position: relative;
+    bottom: 20px;
+    right: 40px;
+}
+
+.icon-tabler-printer {
+    position: relative;
+    bottom: 20px;
+    right: 40px;
+}
+
+.icon-tabler-file-symlink {
+    position: relative;
+    bottom: 20px;
+    right: 40px;
+}
+
+.hidden-text {
+    visibility: hidden;
+}
+
+
+/*Section for recipe*/
+#recipe-content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+#recipe-content p {
+    margin: 10px 15px 0px 15px;
+}
+
+#details h2, #ingredients h2, #directions h2, #side-dishes h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+dl {
+    display: flex;
+    margin-left: 15px;
+    line-height: 0.5;
+}
+
+dt {
+    margin-right: -20px;
+    font-weight: 700;
+}
+
+dd {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#ingredients ul {
+    list-style-type: square;
+    line-height: 2;
+    float: left;
+}
+
+ol {
+    margin-right: 20px;
+    line-height: 1.5;
+}
+
+li {
+    cursor: pointer;
+}
+
+#directions ol li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/*Section for side dishes*/
+aside {
+    background-color: #7ABFBF;
+    padding-bottom: 35px;
+}
+
+aside h2 {
+    padding-top: 5px;
+    margin-bottom: -50px;
+    text-align: center;
+}
+
+aside figure {
+    margin-bottom: 15px;
+}
+
+.rating {
+    margin-top: 34px;
+    margin-left: 95px;
+}
+
+.dish-style {
+    position: relative;
+    left: 95px;
+    top: 55px;
+}
+
+aside img {
+    position: absolute;
+    width: 100px;
+    margin-left: -25px;
+}
+
+aside svg {
+    position: relative;
+    top: 30px;
+    left: -60px;
+}
+
+aside figcaption {
+    position: relative;
+    top: 35px;
+    left: 95px;
+}
+
+.icon-tabler-star {
+    fill: #EB5428;
+}
+
+.icon-tabler-uncheck {
+    fill: white;
+}
+
+figcaption, .rating {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.rating {
+    font-weight: 700;
+}
+
+/*Section for main navigation*/
+#main-nav {
+    width: 414px;
+    height: 125px;
+    margin-top: -40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+ 
+#main-nav h2 {
+    height: 1px;
+}
+ 
+#main-nav ul {
+    text-align: center;
+    background-color: #FFFFFF;
+}
+ 
+#main-nav ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+ 
+#main-nav li a {
+    display: block;
+    padding: 20px 20px;
+    margin-bottom: 2px;
+    text-decoration: none;
+    color: #EB5428;
+}
+
+.hamburger-icon {
+    position: relative;
+    width: 100%;
+    top: 10px;
+    left: 70px;
+}
+
+.hamburger-hover:hover {
+    border: 3px solid #000000;
+    border-radius: 50%;
+    width: 40px;
+    height: 50px;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 11px;
+    position: relative;
+    user-select: none;
+}
+
+#main-nav label span {
+    display: block;
+    position: relative;
+    left: 73px;
+    bottom: -80px;
+    transition: background-color .2s ease-out;
+}
+
+#main-nav label span:before, #main-nav label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+#main-nav label span:before {
+    top: 5px;
+}
+#main-nav label span:after {
+    top: -5px;
+}
+#main-nav input {
+    display: none;
+}
+#main-nav input:checked ~ ul {
+    max-height: 500px;
+}
+#main-nav input:checked ~ label span {
+    background: transparent;
+}
+
+#main-nav input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+[href="#home"] {
+    position: absolute;
+    top: 2px;
+    transform: translate(-50%, -50%);
+    cursor: default;
+}
+
+.icon-tabler-tools-kitchen {
+  background-color: #EB5428;
+  position: absolute;
+  top: 33px;
+  padding: 20px 80px;
+  left: 115px;
+  margin: 10px;
+}
+
+.avatar {
+  position: absolute;
+  top: 92px;
+  right: 25px;
+}
+
+.icon-tabler-user-circle {
+  stroke: #EB5428;
+  position: absolute;
+  top: 50px;
+  right: 27px;
+}
+
+#main-nav a:hover, #main-nav input:hover{
+  background-color: #EB5428;
+  color: #FFFFFF;
+}
+
+#main-nav div {
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.breakfast, .brunch, .lunch, .dinner, .appetizers, .desserts, .beverages {
+    display: none;
+}
+
+/*Section for search bar*/
+.search-bar {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.search-bar input {
+    border: 3px solid #EB5428;
+    padding: 5px;
+    background-color: #FFFFFF;
+    width: 250px;
+}
+
+button {
+    background-color: #EB5428;
+    border-style: none;
+    cursor: pointer;
+}
+
+.icon-tabler-search {
+   stroke: #FFFFFF;
+}
+
+
+/*Section for Social Media links*/
+
+#social nav {
+    display: flex;
+    margin-top: -55px;
+    margin-bottom: -100px;
+}
+
+#social li a {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #EB5428;
+}
+
+#social li {
+    list-style: none;
+}
+
+.fb {
+    position: relative;
+    right: 105px;
+    top: 45px;
+}
+
+.icon-tabler-brand-facebook {
+    position: relative;
+    bottom: 20px;
+    right: 100px;
+}
+
+.ig {
+    position: relative;
+    right: 77px;
+    top: 45px;
+}
+
+.icon-tabler-brand-instagram {
+    position: relative;
+    bottom: 20px;
+    right: 65px;
+}
+
+.youtube {
+    position: relative;
+    right: 50px;
+    top: 45px;
+}
+
+.icon-tabler-brand-youtube {
+    position: relative;
+    bottom: 20px;
+    right: 45px;
+}
+
+.tiktok {
+    position: relative;
+    right: 25px;
+    top: 45px;
+}
+
+.icon-tabler-brand-tiktok {
+    position: relative;
+    bottom: 20px;
+    right: 15px;
+}
+
+/*Section for footer*/
+
+footer {
+    font-size: 20px;
+}
+
+footer p {
+    position: relative;
+    top: 220px;
+    line-height: .1;
+    text-align: center;
+}
+footer img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -70px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+/*Media queries for medium screen*/
+@media screen and (min-width: 768px) {
+    body {
+        width: 768px;
+        transition: width .5s;
+        margin-top: 65px;
+    }
+
+    h1 {
+        text-align: left;
+        margin-left:15px;
+        margin-bottom: -75px;
+    }
+    
+    /*Section for icons: save, share, print and jump to recipe*/
+    menu {
+        justify-content: space-around;
+        position: absolute;
+        top: 297px;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        width: 738px;
+        padding: 35px 15px 20px 15px;
+    }
+
+    .hover-menu:hover {
+        color: #FFFFFF;
+        background-color: #EB5428;
+    }
+
+    /*Section for recipe*/
+    #recipe-content {
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        grid-template-areas: 
+        'intro intro intro intro'
+        'details details details details'
+        'ingredients directions directions directions'
+        'inrgedients directions directions directions'
+        ;
+    }
+
+    .recipe-intro {
+        grid-area: intro;
+    }
+
+    #details  {
+        grid-area: details;
+    }
+
+    #directions {
+        grid-area: directions;
+    }
+
+    #details dl {
+        justify-content: center;
+        text-align: center;
+    }
+
+/*Section for side dishes*/
+aside {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'st st'
+    'mxrice salsa'
+    'guac tort'
+    ;
+}
+
+.side-title {
+    grid-area: st;
+}
+
+.mxrice {
+    grid-area: mxrice;
+}
+
+.salsa {
+    grid-area: salsa;
+}
+
+.guac {
+    grid-area: guac;
+}
+
+.tort {
+    grid-area: tort;
+}
+
+.rating {
+    margin-top: 54px;
+    margin-left: 92px;
+}
+
+.dish-style {
+    position: relative;
+    left: 95px;
+    top: 65px;
+}
+
+aside img {
+    position: absolute;
+    width: 100px;
+}
+
+aside svg {
+    position: relative;
+    top: 5px;
+    left: 7px;
+}
+
+aside figcaption {
+    position: relative;
+    top: 55px;
+    left: 95px;
+}
+
+
+/*.style:hover {
+     background-color: #FFAE42;
+ }*/
+
+/*Section for main navigation*/
+#main-nav {
+    width: 768px;
+    height: 255px;
+}
+
+#main-nav li {
+    width: 115px;
+}
+
+#main-nav a {
+    width: 70px;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+#main-nav label, #dropdown{
+    visibility: hidden;
+}
+
+[href="#home"] {
+    left: -70px;
+}
+
+.icon-tabler-tools-kitchen {
+  background-color: #EB5428;
+  position: absolute;
+  padding: 28px 13px;
+}
+
+#main-nav img {
+    width: 50px;
+}
+
+#main-nav ul {
+    list-style: none;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 87px;
+}
+
+.nav-text {
+    position: relative;
+    top: 55px;
+}
+
+.breakfast, .brunch, .lunch, .dinner, .appetizers, .desserts, .beverages {
+    visibility: visible;
+    display: flex;
+    position: relative;
+    top: -30px;
+    left: 15%;
+}
+
+/*Section for search bar*/
+.search-bar {
+    display: flex;
+    position: fixed;
+    top: 25px;
+    right: -255px;
+    z-index: 1;
+}
+
+.search-bar input {
+    border: 3px solid #EB5428;
+    padding: 5px;
+    background-color: #FFFFFF;
+    width: 250px;
+}
+
+button {
+    background-color: #EB5428;
+    border-style: none;
+    cursor: pointer;
+}
+
+.icon-tabler-search {
+   stroke: #FFFFFF;
+}
+
+
+/*Section for Social Media links*/
+
+#social nav {
+    float: right;
+    margin-top: -35px;
+    margin-right: 25px;
+}
+
+.fb, .youtube, .ig {
+    position: relative;
+    right: -50px;
+    top: -1px;
+}
+
+.icon-tabler-brand-facebook,.icon-tabler-brand-instagram,.icon-tabler-brand-youtube, .icon-tabler-brand-tiktok {
+    position: relative;
+    bottom: 20px;
+    right: 0px;
+}
+
+.tiktok {
+    position: relative;
+    right: -40px;
+    top: -1px;
+}
+
+/*Section for footer*/
+footer {
+    font-size: 20px;
+}
+
+footer p {
+    top: 150px;
+    left: -200px;
+}
+footer img {
+    width: 30%;
+    top: -150px;
+    left: -200px;
+}
+
+}
+
+/*Media queries for large screen*/
+@media screen and (min-width: 1280px) {
+    body {
+        width: 1280px;
+        transition: width .5s;
+        margin-top: 0px;
+        padding-top: 100px;
+    }
+
+    h1 {
+        position: relative;
+        top: -10px;
+        text-align: center;
+    }
+    
+    /*Section for icons: save, share, print and jump to recipe*/
+
+    menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 328px;
+        background-color: rgba(255, 255, 255);
+        border: 2px solid #EB5428;
+        width: 60px;
+        height: 710px;
+    }
+
+    menu li {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+
+    menu span {
+        position: relative;
+        bottom: -50px;
+    }
+
+    .hover-menu:hover {
+        color: #FFFFFF;
+        background-color: #EB5428;
+    }
+
+    .save {
+        margin-top: -100px;
+    }
+
+    .share {
+        margin-top: -195px;
+    }
+
+    .print {
+        margin-top: -290px;
+    }
+
+    .jump {
+        margin-top: -390px;
+    }
+
+    .icon-tabler-download, .icon-tabler-share, .icon-tabler-printer, .icon-tabler-file-symlink {
+        margin-left: 240px;
+    }
+
+    /*Section for recipe*/
+    .street-tacos {
+        width: 40%;
+        margin-left: 87px;
+    }
+
+    .intro {
+        width: 50%;
+        float: right;
+        margin-right: 40px;
+        line-height: 2;
+
+    }
+
+    /*Grid container for details section*/
+    #details {
+        margin-top: -4px;
+
+    }
+
+    #details dl {
+        display: grid;
+    }
+
+    #details dt {
+        position: relative;
+        bottom: 20px;
+        left: 10px;
+    }
+
+    #details {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+        'deets deets deets deets deets'
+        'dt dt dt dt dt'
+        'dd dd dd dd dd'
+        ;
+    } 
+
+    #details h2 {
+        grid-area: deets;
+    }
+
+    dt {
+        grid-area: dt;
+    }
+
+    dd {
+        grid-area: dd;
+    }
+
+    #details {
+        background-color: #000000;
+        color: #7ABFBF;
+    }
+/*Section for side dishes*/
+aside {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-areas: 
+    'st st st st st'
+    'mxrice'
+     /*
+     'st st st st st st'
+     'mxrice mxrice mxrice mxrice'
+     'salsa salsa salsa salsa'
+     'guac guac guac guac' 
+     'tort tort tort tort'*/
+    ;
+}
+
+.side-title {
+    grid-area: st;
+}
+
+.mxrice {
+    grid-area: mxrice;
+}
+
+.salsa {
+    grid-area: salsa;
+}
+
+.guac {
+    grid-area: guac;
+}
+
+.tort {
+    grid-area: tort;
+}
+
+.rating {
+    margin-top: 54px;
+    margin-left: 92px;
+}
+
+.dish-style {
+    position: relative;
+    left: 95px;
+    top: 65px;
+}
+
+aside img {
+    position: absolute;
+    width: 100px;
+}
+
+aside svg {
+    position: relative;
+    top: 5px;
+    left: 7px;
+}
+
+aside figcaption {
+    position: relative;
+    top: 55px;
+    left: 95px;
+}
+
+
+/*.style:hover {
+     background-color: #FFAE42;
+ }*/
+
+/*Section for main navigation*/
+#main-nav {
+    width: 1280px;
+    height: 162px;
+    z-index: 2;
+}
+
+[href="#home"] {
+    left: -90px;
+    top: 72px;
+}
+
+.icon-tabler-tools-kitchen {
+  padding: 31px 13px;
+}
+
+#main-nav img {
+    width: 50px;
+}
+
+#main-nav ul {
+    list-style: none;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -7px;
+}
+
+.nav-text {
+    position: relative;
+    top: 55px;
+}
+
+.breakfast, .brunch, .lunch, .dinner, .appetizers, .desserts, .beverages {
+    top: -30px;
+    left: 15%;
+}
+
+.icon-tabler-user-circle {
+    top: -10px;
+    left: 130px;
+  }
+
+  .avatar {
+    top: 115px;
+    right: 27px;
+  }
+
+/*Section for search bar*/
+.search-bar {
+    position: absolute;
+    top: 175px;
+    right: 0px;
+    z-index: 1;
+}
+
+.icon-tabler-search {
+   top: 0px;
+}
+
+
+/*Section for Social Media links*/
+
+#social nav {
+    float: right;
+}
+
+.fb, .youtube, .ig, .tiktok {
+    position: relative;
+    right: 70px;
+    padding-left: 50px;
+}
+
+.icon-tabler-brand-facebook,.icon-tabler-brand-instagram,.icon-tabler-brand-youtube, .icon {
+    position: relative;
+    right: 120px;
+}
+
+.icon-tabler-brand-tiktok {
+    right: 110px;
+}
+
+/*Section for footer*/
+footer {
+    font-size: 20px;
+}
+
+footer p {
+    top: -70px;
+    margin-right: 220px;
+}
+
+footer img {
+    width: 20%;
+    top: -150px;
+    margin-left: 210px;
+}
